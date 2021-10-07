@@ -1,6 +1,8 @@
 /*code for background image*/
 body{
-    background-image:url(https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-irregular-geometric-background-template-image_144655.jpg)
+    background-image:url(https://ak.picdn.net/shutterstock/videos/33784561/thumb/8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*style input with type="text", select elements and textareas*/
@@ -13,11 +15,12 @@ input[type=text], select, textarea{
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px;  /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: rgba(137, 43, 226, 0.521);
 }
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #04AA6d;
+    background-color: #049faa;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -40,6 +43,9 @@ padding: 20px;
 /*style the table with specific borders, width, etc.*/
 table, th, td{
     border: 1px solid black;
+    box-sizing: border-box;
+    box-shadow: black;
+    background-color: rgba(49, 0, 128, 0.158);
 }
 
 table {
@@ -61,7 +67,7 @@ ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color:none;
     opacity: 0.8;
 }/*Changing the default settings to horizontal nav bar settings*/
 
@@ -79,5 +85,281 @@ li a{
 
 li a:hover{
     background-color:teal; /*change the color of the link when you hover over it*/
+    color: white;
+}
+/*End of the Nav Bar code*/
+
+/*Start of the timeline code */
+
+/* Set a background color */
+body {
+    background-color: none;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: blue;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: rgba(77, 0, 128, 0.274);
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position:absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: red;
+    border: 4px solid black;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent black;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: rgba(0, 128, 128, 0.5);
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+.right{
+    min-width: none;
+    max: width none ;
+}
+/*End of the timeline code*/
+
+/*Code to float images*/
+img{
+  position:static;
+  opacity: 0.7;
 }
 
+/*Start of animation code*/
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-7 10:52:37
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h1{
+animation-name: scale-in-center ;
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+}
+
+h2{
+  animation-name: scale-in-center ;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  }
+
+  h3{
+    animation-name: scale-in-center ;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    }
+
+    p{
+      animation-name: scale-in-center ;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+      }
+/* End of animation  code*/
+
+/* Start of Testimony */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://ak.picdn.net/shutterstock/videos/33784561/thumb/8.jpg);
+}
+
+
+.flip-card{
+  background-color:none;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 100px;
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5%;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5%;
+}
+
+.flip-card-front {
+  background-color:none;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: teal;
+  transform: rotateY(180deg);
+}
+img{
+  border-radius: 5%;
+}
+.flexi{
+  display: flex;
+}
+.zoom:hover{
+  transform: scale(1.4);
+}
